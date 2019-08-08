@@ -10,19 +10,22 @@ dictionary = {}
 # Creates a dictionary for the anagrams with more than one word inside
 ana_dict = {}
 
+# File from which words are referenced from
+ref_dict = 'abr_dict.txt'
+
 # =====================================
 #       DICTIONARY MAKERS AND SORTING
 # =====================================
 
 # Opens the abr_dict.txt file
 # Create dictionary keys and setting their values equal to []
-with open('abr_dict.txt','r') as abr_dict:
+with open(ref_dict,'r') as abr_dict:
     for w in abr_dict:
         w_str = w.strip('\n')
         key = ''.join(sorted(w_str))
         dictionary[key] = []
 
-with open('abr_dict.txt','r') as abr_dict:
+with open(ref_dict,'r') as abr_dict:
     for w in abr_dict:
         w_str = w.strip('\n')
         key = ''.join(sorted(w_str))
