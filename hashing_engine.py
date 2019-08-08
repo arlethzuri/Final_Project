@@ -45,6 +45,13 @@ for dict_key, dict_value in dictionary.items():
 for dict_value in ana_dict.values():
     dict_value.sort(key = lambda l:len(l[0]))
 
+#Special Task: How many anagrams?
+total_anagrams = 0
+for key in ana_dict.keys():
+    total_anagrams += len(ana_dict[key])
+
+print("Total Anagrams:",total_anagrams)
+
 # =====================================
 #       INPUTS and OUTPUTS
 # =====================================
